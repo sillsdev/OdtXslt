@@ -34,13 +34,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_F83D41D6C26E93C2B04B5394DE48198D"
+        "OwnerKey" = "8:_8A2B1599A53B4FFD8C35E7FFA1714DB7"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_8A2B1599A53B4FFD8C35E7FFA1714DB7"
+        "OwnerKey" = "8:_F83D41D6C26E93C2B04B5394DE48198D"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -51,7 +51,7 @@
         "DisplayName" = "8:Debug"
         "IsDebugOnly" = "11:TRUE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Debug\\Setup.msi"
+        "OutputFilename" = "8:Debug\\SetupOdtXslt-1.1.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -61,13 +61,21 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\Setup.msi"
+        "OutputFilename" = "8:Release\\SetupOdtXslt-1.1.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -77,6 +85,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -224,21 +240,21 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:OdtXslt"
-        "ProductCode" = "8:{6852AD72-BA38-437E-85B5-1ED35D62FD62}"
-        "PackageCode" = "8:{5AEF6273-FA2E-4E7B-85AD-83568874AEFB}"
+        "ProductCode" = "8:{0AAEE7E2-0468-4DD9-A632-9B621E6FE244}"
+        "PackageCode" = "8:{E4446F64-2ED8-44BA-A200-14571A10493D}"
         "UpgradeCode" = "8:{0F6A155F-7CDC-4066-AD30-B27C06EECB74}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.1.2"
         "Manufacturer" = "8:SIL"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:http://pathway.sil.org"
         "Title" = "8:OdtXslt"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:SIL"
+        "ARPCONTACT" = "8:Greg Trihus"
         "Keywords" = "8:xslt"
         "ARPCOMMENTS" = "8:Apply xslt to item in odt or docx"
         "ARPURLINFOABOUT" = "8:http://www.sil.org"

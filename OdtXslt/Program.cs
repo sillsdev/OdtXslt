@@ -13,12 +13,10 @@
 // ---------------------------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.IO;
 using System.Reflection;
 using System.Xml;
 using System.Xml.Xsl;
-using System.Windows.Forms;
 using Mono.Options;
 using ICSharpCode.SharpZipLib.Zip;
 
@@ -37,6 +35,7 @@ namespace OdtXslt
                 "OdtXslt.MultiPix.xsl")));
 // ReSharper restore AssignNullToNotNullAttribute
             bool showHelp = false;
+            bool makeBackup = true;
             var  items = new List<string>();
             var transforms = new List<string>();
             var widths = new List<string>();
@@ -58,6 +57,8 @@ namespace OdtXslt
                    v => widths.Add (v) },
                 { "v", "increase debug message verbosity",
                    v => { if (v != null) ++_verbosity; } },
+                { "b|backup",  "controls making backup files", 
+                   v => makeBackup = v != null },
                 { "h|help",  "show this message and exit", 
                    v => showHelp = v != null },
             };
@@ -95,6 +96,10 @@ namespace OdtXslt
 
             string fullName = extra[0];
             Debug("Processing: {0}", fullName);
+            if (makeBackup)
+            {
+                MakeBackupFile(fullName);
+            }
             var odtFile = new ZipFile(fullName);
             if (transforms.Count == 0)
                 ProcessTransform(items, odtFile, xsltArgs);
@@ -102,11 +107,25 @@ namespace OdtXslt
             {
                 foreach (string transform in transforms)
                 {
+                    Debug("Processing: {0}", transform);
                     MultiPix.Load(XmlReader.Create(transform));
                     ProcessTransform(items, odtFile, xsltArgs);
                 }
             }
             odtFile.Close();
+        }
+
+        private static void MakeBackupFile(string fullName)
+        {
+            int n = 0;
+            string bakName;
+            do
+            {
+                n += 1;
+                bakName = string.Format("{0}-{1}{2}", Path.GetFileNameWithoutExtension(fullName), n, Path.GetExtension(fullName));
+            } while (File.Exists(bakName));
+            Debug("Making backup file: {0}", bakName);
+            File.Copy(fullName, bakName);
         }
 
         private static void ProcessTransform(IEnumerable<string> items, ZipFile odtFile, XsltArgumentList xsltArgs)
@@ -124,7 +143,8 @@ namespace OdtXslt
                 xhtmlFile.Close();
                 var curDir = Environment.CurrentDirectory;
                 Environment.CurrentDirectory = Path.GetTempPath();
-                File.Copy(temp, item);
+                const bool overwrite = true;
+                File.Copy(temp, item, overwrite);
                 File.Delete(temp);
                 odtFile.BeginUpdate();
                 odtFile.Add(item);
