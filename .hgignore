@@ -1,0 +1,10 @@
+_ReSharper.DblMetaData
+.*/output/
+.*/obj/
+.*/bin/
+.*\.user
+.*\.suo
+TestResults
+Data
+.*/Debug/.*\.exe
+.*/Release/.*\.exe
