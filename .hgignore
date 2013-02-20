@@ -8,3 +8,5 @@ TestResults
 Data
 .*/Debug/.*\.exe
 .*/Release/.*\.exe
+.*/Debug/.*\.msi
+.*/Release/.*\.msi
