@@ -119,13 +119,21 @@ namespace OdtXslt
         {
             int n = 0;
             string bakName;
+            var fullNameWOext = Path.Combine(Path.GetDirectoryName(fullName), Path.GetFileNameWithoutExtension(fullName));
+            var ext = Path.GetExtension(fullName);
             do
             {
                 n += 1;
-                bakName = string.Format("{0}-{1}{2}", Path.GetFileNameWithoutExtension(fullName), n, Path.GetExtension(fullName));
+                bakName = string.Format("{0}-{1}{2}", fullNameWOext, n, ext);
             } while (File.Exists(bakName));
-            Debug("Making backup file: {0}", bakName);
-            File.Copy(fullName, bakName);
+            try
+            {
+                File.Copy(fullName, bakName);
+                Debug("Making backup file: {0}", bakName);
+            }
+            catch (UnauthorizedAccessException)   // Don't make backup if the folder is not writeable
+            {
+            }
         }
 
         private static void ProcessTransform(IEnumerable<string> items, ZipFile odtFile, XsltArgumentList xsltArgs)
