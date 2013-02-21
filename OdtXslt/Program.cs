@@ -38,7 +38,7 @@ namespace OdtXslt
             bool makeBackup = true;
             var  items = new List<string>();
             var transforms = new List<string>();
-            var widths = new List<string>();
+            var myArgs = new List<string>();
 
             // see: http://stackoverflow.com/questions/491595/best-way-to-parse-command-line-arguments-in-c
             var p = new OptionSet {
@@ -53,8 +53,8 @@ namespace OdtXslt
                 { "t|transform=", "the {TRANSFORM} to apply to the item.\n" +
                         "Defaults to the internal transform.",
                    v => transforms.Add (v) },
-                { "w|width=", "the {WIDTH} of the picture boxes.",
-                   v => widths.Add (v) },
+                { "d|define=", "define argument:value for transformation.",
+                   v => myArgs.Add (v) },
                 { "v", "increase debug message verbosity",
                    v => { if (v != null) ++_verbosity; } },
                 { "b|backup",  "controls making backup files", 
@@ -87,32 +87,46 @@ namespace OdtXslt
                 return;
             }
 
-            // Create argument list
-            XsltArgumentList xsltArgs = new XsltArgumentList();
-            //foreach (string paramName in m_xslParams.Keys)
-            //    args.AddParam(paramName, "", m_xslParams[paramName]);
-            if (widths.Count > 0)
-                xsltArgs.AddParam("width", "", widths[0]);
+            var xsltArgs = new XsltArgumentList();
+            CreateArgumentList(myArgs, xsltArgs);
 
-            string fullName = extra[0];
-            Debug("Processing: {0}", fullName);
-            if (makeBackup)
+            foreach (string  fullName in extra)
             {
-                MakeBackupFile(fullName);
-            }
-            var odtFile = new ZipFile(fullName);
-            if (transforms.Count == 0)
-                ProcessTransform(items, odtFile, xsltArgs);
-            else
-            {
-                foreach (string transform in transforms)
+                Debug("Processing: {0}", fullName);
+                if (makeBackup)
                 {
-                    Debug("Processing: {0}", transform);
-                    MultiPix.Load(XmlReader.Create(transform));
+                    MakeBackupFile(fullName);
+                }
+                var odtFile = new ZipFile(fullName);
+                if (transforms.Count == 0)
                     ProcessTransform(items, odtFile, xsltArgs);
+                else
+                {
+                    foreach (string transform in transforms)
+                    {
+                        Debug("Transforming with: {0}", transform);
+                        MultiPix.Load(XmlReader.Create(transform));
+                        ProcessTransform(items, odtFile, xsltArgs);
+                    }
+                }
+                odtFile.Close();
+            }
+        }
+
+        private static void CreateArgumentList(IEnumerable<string> myArgs, XsltArgumentList xsltArgs)
+        {
+            foreach (string definition in myArgs)
+            {
+                if (definition.Contains(":"))
+                {
+                    var defParse = definition.Split(':');
+                    xsltArgs.AddParam(defParse[0], "", defParse[1]);
+                }
+                else
+                {
+                    xsltArgs.AddParam(definition, "", true);
                 }
             }
-            odtFile.Close();
         }
 
         private static void MakeBackupFile(string fullName)
@@ -128,8 +142,8 @@ namespace OdtXslt
             } while (File.Exists(bakName));
             try
             {
-                File.Copy(fullName, bakName);
                 Debug("Making backup file: {0}", bakName);
+                File.Copy(fullName, bakName);
             }
             catch (UnauthorizedAccessException)   // Don't make backup if the folder is not writeable
             {

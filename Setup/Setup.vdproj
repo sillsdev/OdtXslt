@@ -15,6 +15,12 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_82772ADEDA5D4B6298CE5FB8BF5B6778"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_8A2B1599A53B4FFD8C35E7FFA1714DB7"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -51,7 +57,7 @@
         "DisplayName" = "8:Debug"
         "IsDebugOnly" = "11:TRUE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Debug\\SetupOdtXslt-1.2.msi"
+        "OutputFilename" = "8:Debug\\SetupOdtXslt-1.3.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -88,7 +94,7 @@
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\SetupOdtXslt-1.2.msi"
+        "OutputFilename" = "8:Release\\SetupOdtXslt-1.3.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -148,6 +154,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_82772ADEDA5D4B6298CE5FB8BF5B6778"
+            {
+            "SourcePath" = "8:..\\OdtXslt\\ApplyFootnoteCaller.bat"
+            "TargetName" = "8:ApplyFootnoteCaller.bat"
+            "Tag" = "8:"
+            "Folder" = "8:_F7E038CE880B498BB601D0C61C4B07C7"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CFA2B984A22A490782020CB7DC1BDA07"
             {
             "SourcePath" = "8:E:\\proj\\FootnoteCaller\\FootnoteCaller.xsl"
@@ -266,15 +292,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:OdtXslt"
-        "ProductCode" = "8:{5F84E4C0-0902-4548-B100-A6BD32D76DD1}"
-        "PackageCode" = "8:{41F0B5E5-10E4-4F56-A122-2847B002AF92}"
+        "ProductCode" = "8:{0850719E-5487-42A6-BF03-8D033DECA8D5}"
+        "PackageCode" = "8:{0C35A774-19F2-4F0F-B239-E40A66B62D40}"
         "UpgradeCode" = "8:{0F6A155F-7CDC-4066-AD30-B27C06EECB74}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.2.3"
+        "ProductVersion" = "8:1.3.4"
         "Manufacturer" = "8:SIL"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:http://pathway.sil.org"
@@ -387,20 +413,6 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_2A15E6257C0649189BF7E313C82BBFF9"
-            {
-            "Name" = "8:AdjustFootnoteCaller"
-            "Arguments" = "8:-c -t=FootnoteCaller.xsl"
-            "Description" = "8:Apply FootnoteCaller.xsl to content.xml"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_8A2B1599A53B4FFD8C35E7FFA1714DB7"
-            "Folder" = "8:_A778A2CC7415417FB032B90E62F2F45E"
-            "WorkingFolder" = "8:_2A164E01F9294962B84E86D28D41D204"
-            "Icon" = "8:"
-            "Feature" = "8:"
-            }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D8EECF10DD7D4851A60CACDF4112A73D"
             {
             "Name" = "8:OdtXslt"
