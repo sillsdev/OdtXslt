@@ -156,7 +156,7 @@ namespace OdtXslt
             foreach (string item in items)
             {
                 var temp = Path.GetTempFileName();
-                var settings = new XmlReaderSettings {DtdProcessing = DtdProcessing.Ignore};
+                var settings = new XmlReaderSettings {ProhibitDtd = true, XmlResolver = null};
                 var namePat = new Regex(item.Replace(@"\", @"/").Replace(".", @"\.").Replace("*", ".*"), RegexOptions.IgnoreCase);
                 var zipEntryEnum = odtFile.GetEnumerator();
                 for (var n = 0L; n < odtFile.Count; ++n)
