@@ -15,6 +15,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
+using System.Text.RegularExpressions;
 using System.Xml;
 using System.Xml.Xsl;
 using Mono.Options;
@@ -154,25 +155,41 @@ namespace OdtXslt
         {
             foreach (string item in items)
             {
-                Debug("Processing: {0} in {1}", item, odtFile.Name);
                 var temp = Path.GetTempFileName();
-                var xhtmlFile = new FileStream(temp, FileMode.Create);
-                var htmlw4 = XmlWriter.Create(xhtmlFile, MultiPix.OutputSettings);
                 var settings = new XmlReaderSettings {DtdProcessing = DtdProcessing.Ignore};
-                var reader = new StreamReader(odtFile.GetInputStream(odtFile.GetEntry(item).ZipFileIndex));
-                var reader4 = XmlReader.Create(reader, settings);
-                MultiPix.Transform(reader4, xsltArgs, htmlw4, null);
-                xhtmlFile.Close();
-                var curDir = Environment.CurrentDirectory;
-                Environment.CurrentDirectory = Path.GetTempPath();
-                const bool overwrite = true;
-                File.Copy(temp, item, overwrite);
-                File.Delete(temp);
-                odtFile.BeginUpdate();
-                odtFile.Add(item);
-                odtFile.CommitUpdate();
-                File.Delete(item);
-                Environment.CurrentDirectory = curDir;
+                var namePat = new Regex(item.Replace(@"\", @"/").Replace(".", @"\.").Replace("*", ".*"), RegexOptions.IgnoreCase);
+                var zipEntryEnum = odtFile.GetEnumerator();
+                for (var n = 0L; n < odtFile.Count; ++n)
+                {
+                    zipEntryEnum.MoveNext();
+                    var zipEntry = (ZipEntry)zipEntryEnum.Current;
+                    var name = zipEntry.Name;
+                    if (namePat.Match(name).Success)
+                    {
+                        Debug("Processing: {0} in {1}", name, odtFile.Name);
+                        var xhtmlFile = new FileStream(temp, FileMode.Create);
+                        var htmlw4 = XmlWriter.Create(xhtmlFile, MultiPix.OutputSettings);
+                        var reader = new StreamReader(odtFile.GetInputStream(zipEntry.ZipFileIndex));
+                        var reader4 = XmlReader.Create(reader, settings);
+                        MultiPix.Transform(reader4, xsltArgs, htmlw4, null);
+                        xhtmlFile.Close();
+                        var curDir = Environment.CurrentDirectory;
+                        Environment.CurrentDirectory = Path.GetTempPath();
+                        var entryDirectory = Path.GetDirectoryName(name);
+                        if (!string.IsNullOrEmpty(entryDirectory))
+                            Directory.CreateDirectory(entryDirectory);
+                        const bool overwrite = true;
+                        File.Copy(temp, name, overwrite);
+                        File.Delete(temp);
+                        odtFile.BeginUpdate();
+                        odtFile.Add(name);
+                        odtFile.CommitUpdate();
+                        File.Delete(name);
+                        if (!string.IsNullOrEmpty(entryDirectory))
+                            Directory.Delete(entryDirectory);
+                        Environment.CurrentDirectory = curDir;
+                    }
+                }
             }
         }
 

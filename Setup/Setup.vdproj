@@ -15,6 +15,24 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_24A094134F2B42B28C33E8CACE2AFB6A"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5B36F66EA8C94F93A96CD1FD580985B7"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_6C17884BF59843DDBB889AFA096175AB"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_82772ADEDA5D4B6298CE5FB8BF5B6778"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -94,7 +112,7 @@
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\SetupOdtXslt-1.3.msi"
+        "OutputFilename" = "8:Release\\SetupOdtXslt-1.4.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -154,6 +172,66 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_24A094134F2B42B28C33E8CACE2AFB6A"
+            {
+            "SourcePath" = "8:E:\\proj\\EpubClean\\FixEpub.xsl"
+            "TargetName" = "8:FixEpub.xsl"
+            "Tag" = "8:"
+            "Folder" = "8:_2A164E01F9294962B84E86D28D41D204"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5B36F66EA8C94F93A96CD1FD580985B7"
+            {
+            "SourcePath" = "8:..\\OdtXslt\\Epub Error Clean up.bat"
+            "TargetName" = "8:Epub Error Clean up.bat"
+            "Tag" = "8:"
+            "Folder" = "8:_F7E038CE880B498BB601D0C61C4B07C7"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6C17884BF59843DDBB889AFA096175AB"
+            {
+            "SourcePath" = "8:E:\\proj\\EpubClean\\FixEpubToc.xsl"
+            "TargetName" = "8:FixEpubToc.xsl"
+            "Tag" = "8:"
+            "Folder" = "8:_2A164E01F9294962B84E86D28D41D204"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_82772ADEDA5D4B6298CE5FB8BF5B6778"
             {
             "SourcePath" = "8:..\\OdtXslt\\ApplyFootnoteCaller.bat"
@@ -201,11 +279,6 @@
             "AssemblyAsmDisplayName" = "8:ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_F83D41D6C26E93C2B04B5394DE48198D"
-                    {
-                    "Name" = "8:ICSharpCode.SharpZipLib.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:ICSharpCode.SharpZipLib.dll"
             "TargetName" = "8:"
@@ -292,15 +365,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:OdtXslt"
-        "ProductCode" = "8:{0850719E-5487-42A6-BF03-8D033DECA8D5}"
-        "PackageCode" = "8:{0C35A774-19F2-4F0F-B239-E40A66B62D40}"
+        "ProductCode" = "8:{378237A6-656D-4E98-A85D-77A7EFEC96FA}"
+        "PackageCode" = "8:{419E56F4-F8A4-4728-924B-C053574DBA84}"
         "UpgradeCode" = "8:{0F6A155F-7CDC-4066-AD30-B27C06EECB74}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.3.4"
+        "ProductVersion" = "8:1.4.5"
         "Manufacturer" = "8:SIL"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:http://pathway.sil.org"
