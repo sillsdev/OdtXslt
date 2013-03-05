@@ -33,6 +33,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_76D41FCD7741477C900F3C1EC3731856"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_82772ADEDA5D4B6298CE5FB8BF5B6778"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -46,6 +52,12 @@
         "Entry"
         {
         "MsmKey" = "8:_CFA2B984A22A490782020CB7DC1BDA07"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D74C31293FC24F17A029FADEE91411BB"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -112,7 +124,7 @@
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\SetupOdtXslt-1.6.msi"
+        "OutputFilename" = "8:Release\\SetupOdtXslt-1.7.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -232,6 +244,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_76D41FCD7741477C900F3C1EC3731856"
+            {
+            "SourcePath" = "8:E:\\proj\\FirstHeadword\\FirstHeadword.xsl"
+            "TargetName" = "8:FirstHeadword.xsl"
+            "Tag" = "8:"
+            "Folder" = "8:_2A164E01F9294962B84E86D28D41D204"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_82772ADEDA5D4B6298CE5FB8BF5B6778"
             {
             "SourcePath" = "8:..\\OdtXslt\\ApplyFootnoteCaller.bat"
@@ -272,6 +304,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D74C31293FC24F17A029FADEE91411BB"
+            {
+            "SourcePath" = "8:..\\OdtXslt\\ApplyFirstHeadword.bat"
+            "TargetName" = "8:ApplyFirstHeadword.bat"
+            "Tag" = "8:"
+            "Folder" = "8:_F7E038CE880B498BB601D0C61C4B07C7"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F83D41D6C26E93C2B04B5394DE48198D"
             {
             "AssemblyRegister" = "3:1"
@@ -279,11 +331,6 @@
             "AssemblyAsmDisplayName" = "8:ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_F83D41D6C26E93C2B04B5394DE48198D"
-                    {
-                    "Name" = "8:ICSharpCode.SharpZipLib.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:ICSharpCode.SharpZipLib.dll"
             "TargetName" = "8:"
@@ -370,15 +417,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:OdtXslt"
-        "ProductCode" = "8:{D459D9F7-6D70-4152-AABD-4F4D945ECD08}"
-        "PackageCode" = "8:{7DD88364-0F9B-4FD8-B1D3-3EF6336C0A93}"
+        "ProductCode" = "8:{F72D1374-E2EE-4950-A526-28B6EC639C03}"
+        "PackageCode" = "8:{294F74F0-87F3-464A-9A16-44993D0CEDAA}"
         "UpgradeCode" = "8:{0F6A155F-7CDC-4066-AD30-B27C06EECB74}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.6.9"
+        "ProductVersion" = "8:1.7.10"
         "Manufacturer" = "8:SIL"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:http://pathway.sil.org"
@@ -906,7 +953,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_8A2B1599A53B4FFD8C35E7FFA1714DB7"
             {
-            "SourcePath" = "8:"
+            "SourcePath" = "8:..\\OdtXslt\\obj\\x86\\Release\\OdtXslt.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_2A164E01F9294962B84E86D28D41D204"
