@@ -12,6 +12,7 @@ goto done
 
 :foundIt
 @echo on
+"%progDir%%myProg%" -v -c -t="%progDir%\SIL\OdtXslt\MinorHeadword.xsl" %1
 "%progDir%%myProg%" -v -c -t="%progDir%\SIL\OdtXslt\FirstHeadword.xsl" %1
 @echo off
 :done
