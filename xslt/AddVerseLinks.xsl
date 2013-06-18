@@ -62,7 +62,7 @@
         </xsl:copy>
         <xsl:element name="a" namespace="{$xhtml}">
             <xsl:attribute name="href">
-                <xsl:variable name="chapter" select="number(preceding::*[@class='Chapter_Number']/text())"/>
+                <xsl:variable name="chapter" select="number(preceding::*[@class='Chapter_Number'][1]/text())"/>
                 <xsl:value-of select="../../xhtml:a[$chapter]/@href"/>
             </xsl:attribute>
             <xsl:text>^</xsl:text>
