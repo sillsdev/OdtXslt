@@ -47,7 +47,7 @@
                                 <xsl:value-of select="normalize-space($nextHeadword)"/>
                             </xsl:attribute>
                         </xsl:when>
-                        <!-- staret of letter section -->
+                        <!-- start of letter section -->
                         <xsl:when test="local-name(parent::node()/parent::node()) = 'section'">
                             <xsl:attribute name="office:string-value">
                                 <xsl:variable name="nextHeadword" select="parent::node()/parent::node()/following-sibling::*[1]/text:p[1]/text:span[1]"/>
@@ -85,7 +85,7 @@
                         </xsl:when>
                         <xsl:otherwise>
                             <xsl:attribute name="office:string-value">
-                                <xsl:value-of select="parent::node()/following-sibling::node()[1]/text:span"/>
+                                <xsl:value-of select="parent::node()/following-sibling::node()[starts-with(@text:style-name,'entry')][1]/text:span"/>
                             </xsl:attribute>
                         </xsl:otherwise>
                     </xsl:choose>
