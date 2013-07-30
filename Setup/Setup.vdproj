@@ -154,7 +154,7 @@
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\SetupOdtXslt-1.10.msi"
+        "OutputFilename" = "8:Release\\SetupOdtXslt-1.11.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -236,7 +236,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_24A094134F2B42B28C33E8CACE2AFB6A"
             {
-            "SourcePath" = "8:E:\\proj\\EpubClean\\FixEpub.xsl"
+            "SourcePath" = "8:..\\..\\EpubClean\\FixEpub.xsl"
             "TargetName" = "8:FixEpub.xsl"
             "Tag" = "8:"
             "Folder" = "8:_2A164E01F9294962B84E86D28D41D204"
@@ -336,7 +336,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6C17884BF59843DDBB889AFA096175AB"
             {
-            "SourcePath" = "8:E:\\proj\\EpubClean\\FixEpubToc.xsl"
+            "SourcePath" = "8:..\\..\\EpubClean\\FixEpubToc.xsl"
             "TargetName" = "8:FixEpubToc.xsl"
             "Tag" = "8:"
             "Folder" = "8:_2A164E01F9294962B84E86D28D41D204"
@@ -356,7 +356,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_76D41FCD7741477C900F3C1EC3731856"
             {
-            "SourcePath" = "8:E:\\proj\\FirstHeadword\\FirstHeadword.xsl"
+            "SourcePath" = "8:..\\..\\FirstHeadword\\FirstHeadword.xsl"
             "TargetName" = "8:FirstHeadword.xsl"
             "Tag" = "8:"
             "Folder" = "8:_2A164E01F9294962B84E86D28D41D204"
@@ -416,7 +416,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CFA2B984A22A490782020CB7DC1BDA07"
             {
-            "SourcePath" = "8:E:\\proj\\FootnoteCaller\\FootnoteCaller.xsl"
+            "SourcePath" = "8:..\\..\\FootnoteCaller\\FootnoteCaller.xsl"
             "TargetName" = "8:FootnoteCaller.xsl"
             "Tag" = "8:"
             "Folder" = "8:_2A164E01F9294962B84E86D28D41D204"
@@ -555,7 +555,7 @@
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.10"
+        "ProductVersion" = "8:1.11"
         "Manufacturer" = "8:SIL"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:http://pathway.sil.org"

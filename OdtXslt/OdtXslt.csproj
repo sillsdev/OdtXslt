@@ -29,8 +29,8 @@
     <ProductName>Pathway</ProductName>
     <PublisherName>SIL International</PublisherName>
     <SuiteName>FieldWorks</SuiteName>
-    <ApplicationRevision>13</ApplicationRevision>
-    <ApplicationVersion>1.10.0.%2a</ApplicationVersion>
+    <ApplicationRevision>14</ApplicationRevision>
+    <ApplicationVersion>1.11.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
