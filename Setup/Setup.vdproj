@@ -15,6 +15,12 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_036631C5CDF348A591C2D580963E1BF2"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_138AE75DBB214F67B242AEFFA3932C26"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -70,6 +76,12 @@
         "Entry"
         {
         "MsmKey" = "8:_8A2B1599A53B4FFD8C35E7FFA1714DB7"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A515A6DBBB6A48DF966180C2339BC39E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -154,7 +166,7 @@
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\SetupOdtXslt-1.11.msi"
+        "OutputFilename" = "8:Release\\SetupOdtXslt-1.13.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -214,12 +226,32 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_036631C5CDF348A591C2D580963E1BF2"
+            {
+            "SourcePath" = "8:..\\OdtXslt\\ApplyPictureParaStyle.bat"
+            "TargetName" = "8:ApplyPictureParaStyle.bat"
+            "Tag" = "8:"
+            "Folder" = "8:_60000299BC734D4E97C2BA76CFC1B336"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_138AE75DBB214F67B242AEFFA3932C26"
             {
             "SourcePath" = "8:..\\OdtXslt\\ApplyNoHardSpace.bat"
             "TargetName" = "8:ApplyNoHardSpace.bat"
             "Tag" = "8:"
-            "Folder" = "8:_F7E038CE880B498BB601D0C61C4B07C7"
+            "Folder" = "8:_60000299BC734D4E97C2BA76CFC1B336"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -279,7 +311,7 @@
             "SourcePath" = "8:..\\OdtXslt\\ApplyAddVerseLinks.bat"
             "TargetName" = "8:ApplyAddVerseLinks.bat"
             "Tag" = "8:"
-            "Folder" = "8:_F7E038CE880B498BB601D0C61C4B07C7"
+            "Folder" = "8:_60000299BC734D4E97C2BA76CFC1B336"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -299,7 +331,7 @@
             "SourcePath" = "8:..\\OdtXslt\\Epub Error Clean up.bat"
             "TargetName" = "8:Epub Error Clean up.bat"
             "Tag" = "8:"
-            "Folder" = "8:_F7E038CE880B498BB601D0C61C4B07C7"
+            "Folder" = "8:_60000299BC734D4E97C2BA76CFC1B336"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -379,7 +411,27 @@
             "SourcePath" = "8:..\\OdtXslt\\ApplyFootnoteCaller.bat"
             "TargetName" = "8:ApplyFootnoteCaller.bat"
             "Tag" = "8:"
-            "Folder" = "8:_F7E038CE880B498BB601D0C61C4B07C7"
+            "Folder" = "8:_60000299BC734D4E97C2BA76CFC1B336"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A515A6DBBB6A48DF966180C2339BC39E"
+            {
+            "SourcePath" = "8:..\\xslt\\PictureParaStyle.xsl"
+            "TargetName" = "8:PictureParaStyle.xsl"
+            "Tag" = "8:"
+            "Folder" = "8:_2A164E01F9294962B84E86D28D41D204"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -439,7 +491,7 @@
             "SourcePath" = "8:..\\OdtXslt\\ApplyFirstHeadword.bat"
             "TargetName" = "8:ApplyFirstHeadword.bat"
             "Tag" = "8:"
-            "Folder" = "8:_F7E038CE880B498BB601D0C61C4B07C7"
+            "Folder" = "8:_60000299BC734D4E97C2BA76CFC1B336"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -529,6 +581,17 @@
             "Property" = "8:DesktopFolder"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_60000299BC734D4E97C2BA76CFC1B336"
+                    {
+                    "Name" = "8:OdtXsltScripts"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_875640FB6142414A91AF784C0820154D"
+                        "Folders"
+                        {
+                        }
+                    }
                 }
             }
         }
@@ -547,15 +610,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:OdtXslt"
-        "ProductCode" = "8:{B8B916D4-28CB-44FB-8289-14BCEDA1F2D1}"
-        "PackageCode" = "8:{07CB942C-CDD1-4998-A175-764F11C58DEA}"
+        "ProductCode" = "8:{AC8C5634-53DB-4FE2-A302-B435A870F81A}"
+        "PackageCode" = "8:{2A2BD479-0A5D-41D4-B448-FA0BFC402E48}"
         "UpgradeCode" = "8:{0F6A155F-7CDC-4066-AD30-B27C06EECB74}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.11"
+        "ProductVersion" = "8:1.13"
         "Manufacturer" = "8:SIL"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:http://pathway.sil.org"

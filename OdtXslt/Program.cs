@@ -39,6 +39,7 @@ namespace OdtXslt
             bool makeBackup = true;
             var  items = new List<string>();
             var transforms = new List<string>();
+            var output = new List<string>();
             var myArgs = new List<string>();
 
             // see: http://stackoverflow.com/questions/491595/best-way-to-parse-command-line-arguments-in-c
@@ -54,6 +55,9 @@ namespace OdtXslt
                 { "t|transform=", "the {TRANSFORM} to apply to the item.\n" +
                         "Defaults to the internal transform.",
                    v => transforms.Add (v) },
+                { "o|output=", "the output file for saving the result.\n" +
+                        "Defaults to replacing the file in the source package.",
+                   v => output.Add (v) },
                 { "d|define=", "define argument:value for transformation.",
                    v => myArgs.Add (v) },
                 { "v", "increase debug message verbosity",

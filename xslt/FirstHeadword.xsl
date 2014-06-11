@@ -85,7 +85,7 @@
                         </xsl:when>
                         <xsl:otherwise>
                             <xsl:attribute name="office:string-value">
-                                <xsl:value-of select="parent::node()/following-sibling::node()[starts-with(@text:style-name,'entry')][1]/text:span"/>
+                                <xsl:value-of select="parent::node()/following-sibling::node()[contains(@text:style-name,'entry')][1]/text:span"/>
                             </xsl:attribute>
                         </xsl:otherwise>
                     </xsl:choose>
