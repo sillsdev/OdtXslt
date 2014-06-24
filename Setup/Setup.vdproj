@@ -93,6 +93,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_CE816FD38C0342EAB3C3231BFE66C939"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_CFA2B984A22A490782020CB7DC1BDA07"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -100,6 +106,12 @@
         "Entry"
         {
         "MsmKey" = "8:_D74C31293FC24F17A029FADEE91411BB"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_EA1EFAD51884419FAB8307F24787F4E0"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -166,7 +178,7 @@
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\SetupOdtXslt-1.13.msi"
+        "OutputFilename" = "8:Release\\SetupOdtXslt-1.14.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -466,6 +478,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CE816FD38C0342EAB3C3231BFE66C939"
+            {
+            "SourcePath" = "8:..\\xslt\\Spaceb4Homograph.xsl"
+            "TargetName" = "8:Spaceb4Homograph.xsl"
+            "Tag" = "8:"
+            "Folder" = "8:_2A164E01F9294962B84E86D28D41D204"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CFA2B984A22A490782020CB7DC1BDA07"
             {
             "SourcePath" = "8:..\\..\\FootnoteCaller\\FootnoteCaller.xsl"
@@ -490,6 +522,26 @@
             {
             "SourcePath" = "8:..\\OdtXslt\\ApplyFirstHeadword.bat"
             "TargetName" = "8:ApplyFirstHeadword.bat"
+            "Tag" = "8:"
+            "Folder" = "8:_60000299BC734D4E97C2BA76CFC1B336"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EA1EFAD51884419FAB8307F24787F4E0"
+            {
+            "SourcePath" = "8:..\\OdtXslt\\ApplySpaceB4Homograph.bat"
+            "TargetName" = "8:ApplySpaceB4Homograph.bat"
             "Tag" = "8:"
             "Folder" = "8:_60000299BC734D4E97C2BA76CFC1B336"
             "Condition" = "8:"
@@ -610,15 +662,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:OdtXslt"
-        "ProductCode" = "8:{AC8C5634-53DB-4FE2-A302-B435A870F81A}"
-        "PackageCode" = "8:{2A2BD479-0A5D-41D4-B448-FA0BFC402E48}"
+        "ProductCode" = "8:{65D9A053-9539-47D1-81C9-92235EFBE2FB}"
+        "PackageCode" = "8:{035C68D9-780A-4CF9-AF8E-E4CD540907E8}"
         "UpgradeCode" = "8:{0F6A155F-7CDC-4066-AD30-B27C06EECB74}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.13"
+        "ProductVersion" = "8:1.14"
         "Manufacturer" = "8:SIL"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:http://pathway.sil.org"
