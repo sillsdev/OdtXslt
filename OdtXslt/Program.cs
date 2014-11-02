@@ -175,6 +175,17 @@ namespace OdtXslt
                         var htmlw4 = XmlWriter.Create(xhtmlFile, MultiPix.OutputSettings);
                         var reader = new StreamReader(odtFile.GetInputStream(zipEntry.ZipFileIndex));
                         var reader4 = XmlReader.Create(reader, settings);
+                        try
+                        {
+                            xsltArgs.RemoveParam("inputFileName", "");
+                        }
+                        catch (Exception)
+                        {
+                        }
+                        finally
+                        {
+                            xsltArgs.AddParam("inputFileName", "", name);
+                        }
                         MultiPix.Transform(reader4, xsltArgs, htmlw4, null);
                         xhtmlFile.Close();
                         var curDir = Environment.CurrentDirectory;

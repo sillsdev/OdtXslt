@@ -13,6 +13,8 @@
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     version="1.0">
     
+    <xsl:param name="inputFileName">PartFile00001_.xhtml</xsl:param>
+    
     <xsl:variable name="xhtml">http://www.w3.org/1999/xhtml</xsl:variable>
     
     <xsl:output  doctype-public="-//W3C//DTD XHTML 1.1//EN" 
@@ -32,7 +34,17 @@
         <xsl:text> </xsl:text>
         <xsl:element name="a" namespace="{$xhtml}">
             <xsl:attribute name="href">
-                <xsl:value-of select="substring-before(../xhtml:a[1]/@href,'#')"/>
+                <xsl:variable name="justName" select="substring-after($inputFileName, '/')"/>
+                <xsl:choose>
+                    <xsl:when test="contains($justName, '_0')">
+                        <xsl:value-of select="substring-before($justName, '_0')"/>
+                        <xsl:text>_01.xhtml</xsl:text>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="$justName"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+                <!-- xsl:value-of select="substring-before(../xhtml:a[1]/@href,'#')"/ -->
             </xsl:attribute>
             <xsl:text>^</xsl:text>
         </xsl:element>
