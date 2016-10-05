@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FileLibrary>
+  <File Path="OdtXslt Scripts\ApplyAddVerseLinks.bat" ComponentGuid="845C92C0-1CF4-4883-AB43-9A9828629A52" />
+  <File Path="OdtXslt Scripts\ApplyDoubleUnderline.bat" ComponentGuid="10C0C0DF-B749-4041-B76D-3AA0F0EF7066" />
+  <File Path="OdtXslt Scripts\ApplyFirstHeadword.bat" ComponentGuid="8BF22F51-E069-400C-B1A1-DD687CC8C071" />
+  <File Path="OdtXslt Scripts\ApplyFootnoteCaller.bat" ComponentGuid="C8F2F552-0E77-4323-9758-06A8F92A3606" />
+  <File Path="OdtXslt Scripts\ApplyNoHardSpace.bat" ComponentGuid="C4749643-9F3C-4E56-9F48-B3BF3A0546BA" />
+  <File Path="OdtXslt Scripts\ApplyPictureParaStyle.bat" ComponentGuid="91C1A7AA-FFD9-4123-80BB-AA888FA4819A" />
+  <File Path="OdtXslt Scripts\ApplySpaceB4Homograph.bat" ComponentGuid="DAFA2839-6B9A-4BA6-9233-90A87CBF8DDD" />
+  <File Path="OdtXslt Scripts\Epub Error Clean up.bat" ComponentGuid="3907CF4C-D46A-4D1C-87A5-CB40CE4FB075" />
+  <File Path="OdtXslt Scripts\UpdateHeadword-83.bat" ComponentGuid="49F87A47-8C54-443F-A3E0-4E44E969655F" />
+  <File Path="AddVerseLinks.xsl" ComponentGuid="F039AFC2-552E-4E9F-93AD-C09E19B52B69" />
+  <File Path="DoubleUnderlineGn.xsl" ComponentGuid="1B7D8DAE-BE54-415F-998A-C0162245156E" />
+  <File Path="FirstHeadword.xsl" ComponentGuid="13F3FBFE-205F-4CE5-9E2B-FB6E837AAA2E" />
+  <File Path="FixEpub.xsl" ComponentGuid="4FD2C6E2-D730-40C2-A9DB-60A0964E2F46" />
+  <File Path="FixEpubToc.xsl" ComponentGuid="9E859FC9-CE52-483B-9C7D-F8402512B2A0" />
+  <File Path="FootnoteCaller.xsl" ComponentGuid="9704065C-C06B-4018-99A9-DE1F52D24DEF" />
+  <File Path="ICSharpCode.SharpZipLib.dll" ComponentGuid="66F278F4-D8EB-4D22-9983-1B798590DFC8" />
+  <File Path="MinorHeadword.xsl" ComponentGuid="64303E16-71A1-4639-A4C5-20FA9DDC7298" />
+  <File Path="NoHardSpace.xsl" ComponentGuid="76C669B8-AF53-4826-BEB1-FE79AF630C39" />
+  <File Path="OdtXslt.exe" ComponentGuid="EDEA8C1A-8B17-4105-A2DD-B72835755DAC" />
+  <File Path="OdtXslt.exe.config" ComponentGuid="F5707A96-B786-47E6-A220-83D076C38D3A" />
+  <File Path="OdtXslt.pdb" ComponentGuid="A0E729BF-2904-4E0A-A085-AD43E7DCD4BB" />
+  <File Path="OdtXslt.vshost.exe" ComponentGuid="46AB4CFA-65AB-4B3A-8AFB-DC86B721CDA2" />
+  <File Path="OdtXslt.vshost.exe.config" ComponentGuid="3E41ED99-8525-4EF8-9F77-479C73464910" />
+  <File Path="OdtXslt.vshost.exe.manifest" ComponentGuid="2FB1F644-4F09-4EE1-95F8-5539481562A0" />
+  <File Path="PictureParaStyle.xsl" ComponentGuid="674DDDD8-5C12-4E20-977C-C801C7A10B59" />
+  <File Path="Spaceb4Homograph.xsl" ComponentGuid="0A522165-1EA1-4DB8-AA55-7F27B7F31A90" />
+  <File Path="UpdateHeadword.xsl" ComponentGuid="07FCEC23-ADAD-4BE7-AD40-75615E38A68A" />
+  <File Path="TestXslts.xpr" ComponentGuid="4F55435A-B0EF-4D59-94AB-1502DC1B0554" />
+</FileLibrary>

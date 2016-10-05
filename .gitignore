@@ -4,20 +4,21 @@
 *.obj
 *.elf
 
-# Libraries
-*.lib
-*.a
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
 # Executables
+output/*
+*/bin/*
+*/obj/*
+*/*/bin/*
+*/*/obj/*
 *.exe
 *.out
 *.app
 *.i*86
 *.x86_64
 *.hex
+
+# Generated
+Installer/Application.wxs
+.vs/*
+*.suo
+*/*/*.user
