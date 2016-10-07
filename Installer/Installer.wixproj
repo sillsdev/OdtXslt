@@ -56,8 +56,6 @@
     <Exec Command="$(SolutionDir)BuildStep.exe -v:1 -a:FileComponents --ApplicationFileName=Application.wxs --BasePath=$(SolutionDir)Installer --Product=OdtXslt" WorkingDirectory="$(SolutionDir)" />
   </Target>
   <Target Name="AfterBuild">
-    <Copy SourceFiles="$(OutputPath)/$(OutputName).msi" DestinationFiles="$(OutputPath)/$(OutputName)-117.msi" />
-    <Delete Files="$(OutputPath)/$(OutputName).msi" />
   </Target>
   <PropertyGroup>
     <PreBuildEvent />
