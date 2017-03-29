@@ -141,14 +141,14 @@ namespace OdtXslt
                 }
                 var odtFile = new ZipFile(fullName);
                 if (transforms.Count == 0)
-                    ProcessTransform(items, odtFile, xsltArgs);
+                    ProcessTransform(items, odtFile, xsltArgs, output);
                 else
                 {
                     foreach (string transform in transforms)
                     {
                         Debug("Transforming with: {0}", transform);
                         MultiPix.Load(XmlReader.Create(transform));
-                        ProcessTransform(items, odtFile, xsltArgs);
+                        ProcessTransform(items, odtFile, xsltArgs, output);
                     }
                 }
                 odtFile.Close();
@@ -197,11 +197,13 @@ namespace OdtXslt
             }
         }
 
-        private static void ProcessTransform(IEnumerable<string> items, ZipFile odtFile, XsltArgumentList xsltArgs)
+        private static void ProcessTransform(IEnumerable<string> items, ZipFile odtFile, XsltArgumentList xsltArgs, List<string> output )
         {
+	        var outNum = 0;
             foreach (string item in items)
             {
                 var temp = Path.GetTempFileName();
+	            if (output.Count > 0) temp = output[outNum%output.Count];
                 var settings = new XmlReaderSettings {ProhibitDtd = true, XmlResolver = null};
                 var namePat = new Regex(item.Replace(@"\", @"/").Replace(".", @"\.").Replace("*", ".*"), RegexOptions.IgnoreCase);
                 var zipEntryEnum = odtFile.GetEnumerator();
@@ -232,6 +234,7 @@ namespace OdtXslt
                         }
                         MultiPix.Transform(reader4, xsltArgs, htmlw4, null);
                         xhtmlFile.Close();
+	                    if (output.Count > 0) continue;
                         var curDir = Environment.CurrentDirectory;
                         Environment.CurrentDirectory = Path.GetTempPath();
                         var entryDirectory = Path.GetDirectoryName(name);

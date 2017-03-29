@@ -28,4 +28,6 @@
   <File Path="Spaceb4Homograph.xsl" ComponentGuid="0A522165-1EA1-4DB8-AA55-7F27B7F31A90" />
   <File Path="UpdateHeadword.xsl" ComponentGuid="07FCEC23-ADAD-4BE7-AD40-75615E38A68A" />
   <File Path="TestXslts.xpr" ComponentGuid="4F55435A-B0EF-4D59-94AB-1502DC1B0554" />
+  <File Path="OdtXslt Scripts\NoteCommentExtract.bat" ComponentGuid="4FDAF210-A44B-4A18-8D9E-A430C7668377" />
+  <File Path="NoteComments.xsl" ComponentGuid="4383F26A-5ACC-462E-9CB7-2AFC4CA680B6" />
 </FileLibrary>
