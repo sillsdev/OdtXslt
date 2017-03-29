@@ -1,17 +1,17 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("OdtXslt")]
-[assembly: AssemblyDescription("Apply XSLT to items inside ODT, EPUB, or DOCX")]
+[assembly: AssemblyTitle("DownloadInfoTemplate")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("SIL International")]
-[assembly: AssemblyProduct("OdtXslt")]
-[assembly: AssemblyCopyright("© 2013 SIL International")]
-[assembly: AssemblyTrademark("SIL International")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("DownloadInfoTemplate")]
+[assembly: AssemblyCopyright("Copyright ©  2016")]
+[assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("e05a6cff-9442-43ee-a6fa-07bc0261b8ae")]
+[assembly: Guid("d5f1e780-2c05-4bf1-a9c6-1fbd060e48fe")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -31,6 +31,6 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
-// [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.19.0.27")]
-[assembly: AssemblyFileVersion("1.19.0.27")]
+// [assembly: AssemblyVersion("1.15.10.5724*")]
+[assembly: AssemblyVersion("1.15.10.5724")]
+[assembly: AssemblyFileVersion("1.15.10.5724")]
