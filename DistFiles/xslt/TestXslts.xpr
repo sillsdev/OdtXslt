@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project version="14.1">
+<project version="14.2">
     <meta>
         <filters directoryPatterns="" filePatterns="" positiveFilePatterns="" showHiddenFiles="false"/>
         <options>
-            <serialized version="14.1" xml:space="preserve">
+            <serialized version="14.2" xml:space="preserve">
                 <map>
                     <entry>
                         <String>scenario.associations</String>
@@ -450,7 +450,17 @@
     </meta>
     <projectTree name="TestXslts.xpr">
         <file name="AddVerseLinks.xsl"/>
+        <file name="DoubleUnderlineGn.xsl"/>
         <file name="FirstHeadword.xsl"/>
-        <file name="file:/C:/Users/Trihus/Documents/Publications/Buang-Test/Dictionary/FieldWorksStyles_2013-07-29_123330%20-%20Copy/main.odt"/>
+        <file name="FixEpub.xsl"/>
+        <file name="FixEpubToc.xsl"/>
+        <file name="FootnoteCaller.xsl"/>
+        <file name="../../../../Documents/Publications/Buang-Test/Dictionary/FieldWorksStyles_2013-07-29_123330%20-%20Copy/main.odt"/>
+        <file name="MinorHeadword.xsl"/>
+        <file name="NoHardSpace.xsl"/>
+        <file name="NoteComments.xsl"/>
+        <file name="PictureParaStyle.xsl"/>
+        <file name="Spaceb4Homograph.xsl"/>
+        <file name="UpdateHeadword.xsl"/>
     </projectTree>
 </project>

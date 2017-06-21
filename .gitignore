@@ -5,6 +5,7 @@
 *.elf
 
 # Executables
+packages/*
 output/*
 */bin/*
 */obj/*
@@ -22,3 +23,5 @@ Installer/Application.wxs
 .vs/*
 *.suo
 */*/*.user
+*.pdb
+*.config

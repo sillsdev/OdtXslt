@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!-- #############################################################
     # Name:        FirstHeadword.xsl
     # Purpose:     Set headword to first one on the page
@@ -83,6 +83,12 @@
                             <xsl:attribute name="office:string-value">
                                 <xsl:value-of select="preceding-sibling::text:span"/>                            </xsl:attribute>
                         </xsl:when>
+                    	<xsl:when test="count(parent::node()/following-sibling::node()[contains(@text:style-name,'entry')][1]) = 0">
+                    		<xsl:attribute name="office:string-value">
+                    			<xsl:variable name="nextHeadword" select="parent::*/parent::*/following-sibling::*[2]/*[starts-with(@text:style-name,'entry')][1]/text:span[1]"/>
+                    			<xsl:value-of select="$nextHeadword"/>
+                    		</xsl:attribute>
+                    	</xsl:when>
                         <xsl:otherwise>
                             <xsl:attribute name="office:string-value">
                                 <xsl:value-of select="parent::node()/following-sibling::node()[contains(@text:style-name,'entry')][1]/text:span"/>
