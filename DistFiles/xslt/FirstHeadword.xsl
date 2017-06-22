@@ -38,40 +38,40 @@
                 </xsl:if>
             </xsl:for-each>
             <xsl:choose>
-                <xsl:when test="count(preceding-sibling::text:span) = 0">
+                <xsl:when test="count(parent::*/preceding-sibling::*) = 0">
                     <xsl:choose>
                         <!-- start of document -->
-                        <xsl:when test="local-name(parent::node()) = 'variable-decls' or local-name(parent::node()/parent::node()) = 'text'">
+                        <xsl:when test="local-name(parent::*) = 'variable-decls' or local-name(parent::*/parent::*) = 'text'">
                             <xsl:attribute name="office:string-value">
-                                <xsl:variable name="nextHeadword" select="parent::node()/following-sibling::text:section[2]/text:p[1]/text:span[1]"/>
+                                <xsl:variable name="nextHeadword" select="parent::*/following-sibling::text:section[2]/text:p[1]/text:span[1]"/>
                                 <xsl:value-of select="normalize-space($nextHeadword)"/>
                             </xsl:attribute>
                         </xsl:when>
                         <!-- start of letter section -->
-                        <xsl:when test="local-name(parent::node()/parent::node()) = 'section'">
+                        <xsl:when test="local-name(parent::*/parent::*) = 'section'">
                             <xsl:attribute name="office:string-value">
-                                <xsl:variable name="nextHeadword" select="parent::node()/parent::node()/following-sibling::*[1]/text:p[1]/text:span[1]"/>
+                                <xsl:variable name="nextHeadword" select="preceding-sibling::*"/>
                                 <xsl:value-of select="normalize-space($nextHeadword)"/>
                             </xsl:attribute>
                         </xsl:when>
                         <!-- end of letter section -->
-                        <xsl:when test="count(parent::node()/parent::node()/following-sibling::*) = 0">
+                        <xsl:when test="count(parent::*/parent::*/following-sibling::*) = 0">
                             <xsl:attribute name="office:string-value">
                                 <xsl:variable name="nextHeadword" select="ancestor::text:section/following-sibling::text:section[2]/text:p[1]/text:span[1]"/>
                                 <xsl:value-of select="normalize-space($nextHeadword)"/>
                             </xsl:attribute>
                         </xsl:when>
                         <!-- page breaks at this entry -->
-                        <xsl:when test="parent::node()/preceding-sibling::text:soft-page-break">
+                        <xsl:when test="parent::*/preceding-sibling::text:soft-page-break">
                             <xsl:attribute name="office:string-value">
-                                <xsl:variable name="nextHeadword" select="parent::node()/preceding-sibling::text:span"/>
+                                <xsl:variable name="nextHeadword" select="parent::*/preceding-sibling::text:span"/>
                                 <xsl:value-of select="normalize-space($nextHeadword)"/>
                             </xsl:attribute>
                         </xsl:when>
                         <!-- normal entry -->
                         <xsl:otherwise>
                             <xsl:attribute name="office:string-value">
-                                <xsl:variable name="nextHeadword" select="parent::node()/parent::node()/following-sibling::*[1]/text:span[1]"/>
+                                <xsl:variable name="nextHeadword" select="parent::*/parent::*/following-sibling::*[1]/*[1]"/>
                                 <xsl:value-of select="normalize-space($nextHeadword)"/>
                             </xsl:attribute>
                         </xsl:otherwise>
@@ -79,19 +79,29 @@
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:choose>
-                        <xsl:when test="preceding-sibling::text:soft-page-break">
-                            <xsl:attribute name="office:string-value">
-                                <xsl:value-of select="preceding-sibling::text:span"/>                            </xsl:attribute>
-                        </xsl:when>
-                    	<xsl:when test="count(parent::node()/following-sibling::node()[contains(@text:style-name,'entry')][1]) = 0">
+                    	<!-- start of document -->
+                    	<xsl:when test="local-name(parent::*) = 'variable-decls' or local-name(parent::*/parent::*) = 'text'">
                     		<xsl:attribute name="office:string-value">
-                    			<xsl:variable name="nextHeadword" select="parent::*/parent::*/following-sibling::*[2]/*[starts-with(@text:style-name,'entry')][1]/text:span[1]"/>
+                    			<xsl:variable name="nextHeadword" select="parent::*/following-sibling::text:section[2]/text:p[1]/*[1]"/>
+                    			<xsl:value-of select="normalize-space($nextHeadword)"/>
+                    		</xsl:attribute>
+                    	</xsl:when>
+                    	<!-- At soft page break -->
+                    	<xsl:when test="preceding-sibling::text:soft-page-break">
+                            <xsl:attribute name="office:string-value">
+                                <xsl:value-of select="preceding-sibling::*[1]"/>
+                            </xsl:attribute>
+                        </xsl:when>
+                    	<!-- At letter head section at page beginning -->
+                    	<xsl:when test="count(parent::*/following-sibling::*[1]) = 0">
+                    		<xsl:attribute name="office:string-value">
+                    			<xsl:variable name="nextHeadword" select="parent::*/parent::*/following-sibling::*[2]//*[starts-with(@text:style-name,'entry') or starts-with(@text:style-name,'reversalindexentry')][1]/*[1]"/>
                     			<xsl:value-of select="$nextHeadword"/>
                     		</xsl:attribute>
                     	</xsl:when>
                         <xsl:otherwise>
                             <xsl:attribute name="office:string-value">
-                                <xsl:value-of select="parent::node()/following-sibling::node()[contains(@text:style-name,'entry')][1]/text:span"/>
+                                <xsl:value-of select="parent::*/following-sibling::*[1]/*[1]"/>
                             </xsl:attribute>
                         </xsl:otherwise>
                     </xsl:choose>
@@ -99,4 +109,15 @@
             </xsl:choose>
         </xsl:copy>
     </xsl:template>
+	
+	<xsl:template match="*[@text:name='RLeft_Guideword_L']">
+		<xsl:copy>
+			<xsl:for-each select="@*">
+				<xsl:if test="local-name() != 'string-value'">
+					<xsl:copy/>
+				</xsl:if>
+			</xsl:for-each>
+			<xsl:attribute name="office:string-value"/>
+		</xsl:copy>
+	</xsl:template>
 </xsl:stylesheet>
