@@ -78,6 +78,11 @@
                     </xsl:choose>
                 </xsl:when>
                 <xsl:otherwise>
+                	<!-- This allows you to stop the debugger at a particulare entry
+                	<xsl:variable name="headword" select="string(preceding-sibling::*[1])"/>
+                	<xsl:if test="$headword = 'ahkado'">
+                		<xsl:message>My Message</xsl:message>
+                	</xsl:if-->
                     <xsl:choose>
                     	<!-- start of document -->
                     	<xsl:when test="local-name(parent::*) = 'variable-decls' or local-name(parent::*/parent::*) = 'text'">
@@ -89,7 +94,7 @@
                     	<!-- At soft page break -->
                     	<xsl:when test="preceding-sibling::text:soft-page-break">
                             <xsl:attribute name="office:string-value">
-                                <xsl:value-of select="preceding-sibling::*[1]"/>
+                            	<xsl:value-of select="preceding-sibling::*[local-name() ='span' or local-name()='a'][1]"/>
                             </xsl:attribute>
                         </xsl:when>
                     	<!-- At letter head section at page beginning -->
@@ -101,7 +106,7 @@
                     	</xsl:when>
                         <xsl:otherwise>
                             <xsl:attribute name="office:string-value">
-                                <xsl:value-of select="parent::*/following-sibling::*[1]/*[1]"/>
+                            	<xsl:value-of select="parent::*/following-sibling::*[1]/*[local-name() ='span' or local-name()='a'][1]"/>
                             </xsl:attribute>
                         </xsl:otherwise>
                     </xsl:choose>
